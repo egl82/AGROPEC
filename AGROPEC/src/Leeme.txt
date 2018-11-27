@@ -1,0 +1,45 @@
+######## Tamaño de las pantallas ###########
+
+setBounds(100, 100, 900, 600);
+
+############################################
+
+Botón para invocar la clase calendario 
+ 
+ 	JButton btnCalendario = new JButton("Calendario");
+		btnCalendario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			Calendario calendario = new Calendario(); 
+			calendario.setVisible(true);
+					
+			}
+		});
+		btnCalendario.setBounds(80, 116, 89, 23);
+		contentPane.add(btnCalendario);
+############################################
+
+//Metodo "SALIR" al menú
+final MenuVentana menuV = new MenuVentana();
+				menuV.setVisible(true);
+				dispose(); 
+				
+############################################
+	//Cambia de estilo las pantallas	
+	Dentro del main 
+
+	try{
+			  
+		  JFrame.setDefaultLookAndFeelDecorated(true);
+		  JDialog.setDefaultLookAndFeelDecorated(true);
+		  UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+		  UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		  UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+			}
+			catch (Exception e)
+			 {
+			  e.printStackTrace();
+			 }
+		
+		
+	}
+############################################
