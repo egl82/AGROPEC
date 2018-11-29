@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import utils.Calendario;
+import utils.Reloj;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,6 +14,18 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Dimension;
+import java.awt.Insets;
+import java.awt.Choice;
+import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MenuVentana extends JFrame {
 
@@ -115,24 +128,10 @@ public class MenuVentana extends JFrame {
 		btnSalir.setBounds(785, 11, 89, 46);
 		contentPane.add(btnSalir);
 
-		JLabel lblNombreApp = new JLabel("------------------"); //Cambiar al nombre de la aplicacion 
-		lblNombreApp.setFont(new Font("Tahoma", Font.PLAIN, 40));
-		lblNombreApp.setBounds(165, 34, 581, 68);
+		JLabel lblNombreApp = new JLabel("AGROALIMENTARIA MORGADOLIVAS"); //Cambiar al nombre de la aplicacion 
+		lblNombreApp.setFont(new Font("Tahoma", Font.PLAIN, 34));
+		lblNombreApp.setBounds(161, 33, 581, 68);
 		contentPane.add(lblNombreApp);
 		
-		JButton btnCalendar = new JButton("");
-		btnCalendar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Calendario calendario = new Calendario(); 
-				calendario.setVisible(true);
-						
-			}
-		});
-		btnCalendar.setBounds(795, 510, 33, 23);
-		contentPane.add(btnCalendar);
-		
-		JLabel lblCalendario = new JLabel("Calendario");
-		lblCalendario.setBounds(785, 491, 69, 14);
-		contentPane.add(lblCalendario);
 	}
 }
